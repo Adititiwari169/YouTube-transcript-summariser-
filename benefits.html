@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Transcript Summarizer - Benefits</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1b1b2f;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-family: 'Roboto', sans-serif;
+      animation: slideInFromLeft 1s forwards;
+    }
+
+    .description {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    .benefits {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    .benefit {
+      background-color: #1f4068;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.1em;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .benefit:hover {
+      transform: scale(1.05);
+    }
+
+    .benefit:nth-child(1) {
+      animation: bounce 1.5s forwards;
+    }
+
+    .benefit:nth-child(2) {
+      animation: bounce 2s forwards;
+    }
+
+    .benefit:nth-child(3) {
+      animation: bounce 2.5s forwards;
+    }
+
+    .ready-link {
+      margin-top: 40px;
+      font-size: 1.5em;
+      text-decoration: none;
+      color: #ffffff;
+      display: inline-block;
+      animation: pulse 1.5s infinite;
+    }
+
+    .ready-link:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>YouTube Transcript Summarizer</h1>
+    <div class="description">
+      Discover how the YouTube Transcript Summarizer can help you quickly understand video content without watching it entirely.
+      With automatic summaries, you can save time and get the key points in seconds.
+    </div>
+
+    <div class="benefits">
+      <div class="benefit">
+        <strong>Time-Saving</strong>
+        <p>Get summaries of YouTube videos instantly, saving you time by focusing on key points.</p>
+      </div>
+      <div class="benefit">
+        <strong>Easy to Use</strong>
+        <p>Simply paste the YouTube URL, and the tool automatically extracts and summarizes the transcript for you.</p>
+      </div>
+      <div class="benefit">
+        <strong>Visualized Summaries</strong>
+        <p>Get visualized summary for more fun and ease.</p>
+      </div>
+    </div>
+
+    <!-- Are You Ready Link -->
+    <a href="details.html" class="ready-link">Are You Ready?</a>
+  </div>
+
+</body>
+</html>

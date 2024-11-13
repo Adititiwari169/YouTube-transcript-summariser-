@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Transcript Summarizer - Step 4</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1b1b2f;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    /* Input box for YouTube URL */
+    .url-box {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+    }
+
+    /* Copy Button Style */
+    .copy-btn {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #ff3b3f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .copy-btn:hover {
+      background-color: #ff5c5f;
+    }
+
+    /* Generate Summary Button */
+    .generate-btn {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #42f5a1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+
+    .generate-btn:hover {
+      background-color: #6ff2c2;
+    }
+
+    /* Add More Summaries Button */
+    .more-summary-btn {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #ff9a00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      display: none; /* Initially hidden */
+    }
+
+    .more-summary-btn:hover {
+      background-color: #ffb84d;
+    }
+
+
+    h1 {
+      font-size: 2.5em;
+      font-family: 'Roboto', sans-serif;
+      margin-bottom: 20px;
+      animation: fadeIn 2s forwards;
+      z-index: 5;
+    }
+
+    p {
+      font-size: 1.2em;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+      z-index: 5;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Page Title -->
+    <h1>YouTube Transcript Summarizer</h1>
+
+    <!-- Copy Link Box for YouTube API -->
+    <input type="text" id="youtube-url" class="url-box" placeholder="Paste YouTube video URL here">
+
+    <!-- Copy Button -->
+    <button class="copy-btn" onclick="copyLink()">Copy Link</button>
+     <!-- Instructions or Descriptions -->
+     <p>Paste a YouTube URL above, click "Generate Summary" to summarize the video transcript.</p>
+
+
+    <!-- Generate Summary Button -->
+    <button class="generate-btn" onclick="generateSummary()">Generate Summary</button>
+
+    <!-- Add More Summaries Button, initially hidden -->
+    <a href="step3.html">
+      <button class="more-summary-btn">Alternative Summary</button>
+    </a>
+
+   
+  </div>
+
+  <script>
+    // Function to copy the URL to clipboard
+    function copyLink() {
+      const urlInput = document.getElementById("youtube-url");
+      urlInput.select();
+      urlInput.setSelectionRange(0, 99999); // For mobile devices
+      document.execCommand("copy");
+
+      // Optional: Change button text to show copied message
+      alert("Link copied to clipboard!");
+    }
+
+    // Function to simulate summary generation
+    function generateSummary() {
+      // Hide the Generate Summary button
+      document.querySelector('.generate-btn').style.display = 'none';
+      
+      // Show the "Add More Summaries" button after generating the first summary
+      document.querySelector('.more-summary-btn').style.display = 'inline-block';
+
+      // Optional: You can add some logic here for actual summary generation (API call, etc.)
+      alert('Summary Generated!');
+    }
+  </script>
+   </div>
+
+   <a href="details.html" class="next-link">More!!</a>
+ </div>
+
+
+</body>
+</html>

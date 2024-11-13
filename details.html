@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Transcript Summarizer - User Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1b1b2f;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-family: 'Roboto', sans-serif;
+      animation: slideInFromLeft 1s forwards;
+    }
+
+    .description {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    .user-form {
+      background-color: #1f4068;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+      animation: fadeIn 2s forwards;
+    }
+
+    input[type="text"], input[type="email"], input[type="number"] {
+      width: 80%;
+      padding: 10px;
+      font-size: 1.2em;
+      margin: 20px 0;
+      border: 2px solid #f44336;
+      border-radius: 5px;
+      outline: none;
+      background-color: #fff;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #d32f2f;
+    }
+
+    
+
+    .back-link {
+      margin-top: 40px;
+      font-size: 1.5em;
+      text-decoration: none;
+      color: #fffdfd;
+      display: inline-block;
+      animation: pulse 1.5s infinite;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>YouTube Transcript Summarizer</h1>
+    <div class="description">
+      Please enter your details to continue! We'll summarize your YouTube video in no time. 😊
+    </div>
+
+    <div class="user-form">
+      <form action="your-backend-url" method="POST">
+        <input type="text" name="name" placeholder="Enter Your Name" required><br>
+        <input type="email" name="email" placeholder="Enter Your Email" required><br>
+        <input type="number" name="age" placeholder="Enter Your Age" required><br>
+        <input type="submit" value="Submit Details">
+      </form>
+    </div>
+
+
+    </div>
+
+    <a href="summary.html" class="Next-link">next</a>
+  </div>
+
+</body>
+</html>
